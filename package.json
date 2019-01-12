@@ -1,0 +1,34 @@
+{
+  "name": "amygb-int",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.3",
+    "dotenv": "^6.2.0",
+    "fastify": "^1.13.4",
+    "fastify-autoload": "^0.6.0",
+    "fastify-cli": "^0.27.0",
+    "fastify-plugin": "^1.4.0",
+    "fastify-sensible": "^1.0.0",
+    "jsonwebtoken": "^8.4.0",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.4.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9",
+    "tap": "^12.0.0"
+  },
+  "scripts": {
+    "test": "tap test/**/*.test.js",
+    "start": "fastify start -l info -p 5455 index.js",
+    "dev": "nodemon --exec yarn start",
+    "prod": "pm2 start npm --no-automation --name amygb  -- run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
